@@ -93,6 +93,19 @@ body {
   -webkit-text-size-adjust: none;
 }
 
+* {
+  padding: 0;
+  margin: 0;
+  line-height: 1.5;
+  list-style: none;
+  box-sizing: border-box;
+  color: #333;
+}
+img {
+  width: 100px;
+  vertical-align: top;
+}
+
 /* 뷰표트 변환시 폰트크기 자동확대 방지 */
 
 input {
@@ -292,6 +305,9 @@ legend {
   }
 }
 
-body {
-  background-image: url(../../1-1599이상.jpg) 0 0 no-repeat;
-}
+// body {
+//   background: url(../../1-1599이상.jpg) no-repeat 0 0;
+//   #wrap {
+//     opacity: 0.8;
+//   }
+// }
