@@ -29,7 +29,10 @@ select,
 button,
 header,
 main,
-article {
+article,
+section,
+a,
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -125,21 +128,16 @@ input[type=search]::-webkit-search-cancel-button {
 }
 
 /* 기본 폰트 설정 */
-/* mobile */
+/* desktop */
 body {
   background: #fff;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.5;
   font-family: "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif;
   color: #111;
 }
 
-/* desktop */
-@media screen and (min-width: 1280px) {
-  body {
-    font-size: 16px;
-  }
-}
+/* mobile */
 /* color값은 디자인가이드에 맞게사용 */
 a {
   color: #333;
@@ -272,6 +270,42 @@ legend {
   content: "";
 }
 
+/* Wwidth 1440px 이하일 경우 */
+@media screen and (max-width: 1440px) {
+  body {
+    background-color: blue;
+  }
+}
+/* Wwidth 1280px 이하일 경우 */
+@media screen and (max-width: 1280px) {
+  body {
+    background-color: lightblue;
+  }
+}
+/*** Wwidth 1024px 이하일 경우 (tablet)*/
+@media screen and (max-width: 1024px) {
+  body {
+    background-color: green;
+  }
+}
+/* Wwidth 744px 이하일 경우 */
+@media screen and (max-width: 744px) {
+  body {
+    background-color: lightgreen;
+  }
+}
+/*** Wwidth 428px 이하일 경우(mobile) */
+@media screen and (max-width: 428px) {
+  body {
+    background-color: yellowgreen;
+  }
+}
+/* Wwidth 360px 이하일 경우 */
+@media screen and (max-width: 360px) {
+  body {
+    background-color: darkcyan;
+  }
+}
 @font-face {
   font-family: "Poppins";
   font-weight: 300;
@@ -337,7 +371,10 @@ select,
 button,
 header,
 main,
-article {
+article,
+section,
+a,
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -433,21 +470,16 @@ input[type=search]::-webkit-search-cancel-button {
 }
 
 /* 기본 폰트 설정 */
-/* mobile */
+/* desktop */
 body {
   background: #fff;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.5;
   font-family: "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif;
   color: #111;
 }
 
-/* desktop */
-@media screen and (min-width: 1280px) {
-  body {
-    font-size: 16px;
-  }
-}
+/* mobile */
 /* color값은 디자인가이드에 맞게사용 */
 a {
   color: #333;
@@ -695,6 +727,22 @@ img {
   background-color: #e3e3e3;
 }
 
+@media screen and (max-width: 1440px) {
+  #wrap {
+    display: block;
+    height: auto;
+  }
+  #header {
+    display: block;
+    flex-direction: row;
+    width: 100%;
+    padding: 0;
+  }
+  #header .inner {
+    display: flex;
+    justify-content: space-between;
+  }
+}
 #logo a {
   display: block;
   width: 150px;
@@ -726,7 +774,7 @@ img {
 }
 .spot .contact a {
   position: relative;
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 .spot .contact a::before {
   content: "";
@@ -778,6 +826,42 @@ img {
   width: calc(100% - 200px);
 }
 
+@media screen and (max-width: 1440px) {
+  #logo {
+    display: flex;
+    align-items: center;
+  }
+  #logo a {
+    display: block;
+    width: 250px;
+    height: 50px;
+    background: url(../../images/logo2.png) no-repeat 0 0;
+  }
+  #gnb {
+    margin: 0;
+    width: auto;
+  }
+  #gnb .depth1 {
+    display: flex;
+  }
+  #gnb .depth1 a {
+    height: 103px;
+    line-height: 103px;
+    padding: 0 40px;
+  }
+  .spot {
+    display: none;
+  }
+  .util {
+    position: static;
+    height: 50px;
+  }
+  #main {
+    padding-top: 0;
+    width: 100%;
+    height: auto;
+  }
+}
 .grid {
   height: calc(100vh - 40px);
   width: 100%;
@@ -786,24 +870,30 @@ img {
   grid-template-rows: repeat(4, 1fr);
 }
 
+@media screen and (max-width: 1440px) {
+  .grid {
+    height: calc(100vh - 153px);
+  }
+}
 .box-g {
   overflow: hidden;
   position: relative;
   height: 100%;
   background-color: #c7c7c7;
+  padding: 30px 20px;
 }
 .box-g .tit-big {
   position: absolute;
   bottom: -37px;
   right: -10px;
   color: rgba(255, 255, 255, 0.9);
-  font-size: 100px;
+  font-size: 6.25rem;
   font-weight: 900;
   letter-spacing: 3px;
   text-transform: capitalize;
 }
 .box-g p {
-  font-size: 18px;
+  font-size: 1.125rem;
   padding: 30px 20px;
   text-transform: capitalize;
 }
@@ -827,7 +917,7 @@ img {
 .box-3::after {
   content: "\f2f9";
   font-family: "Font Awesome 6 Free";
-  font-size: 160px;
+  font-size: 10rem;
   color: #fff;
   position: absolute;
   bottom: -60px;
