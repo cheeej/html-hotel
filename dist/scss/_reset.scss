@@ -156,12 +156,11 @@ body {
   color: #111;
 }
 
-/* mobile */
-// @media screen and (min-width: 1280px) {
-//   body {
-//     font-size: 16px;
-//   }
-// }
+@media screen and (max-width: 744px) {
+  body {
+    font-size: 14px;
+  }
+}
 
 /* color값은 디자인가이드에 맞게사용 */
 
@@ -309,8 +308,8 @@ legend {
 }
 
 // body {
-//   background: url(../../2-1599이하.png) no-repeat 0 0;
+//   background: url(../../7-479이하.png) 50% 0 no-repeat;
 //   #wrap {
-//     opacity: 0.8;
+//     opacity: 0.7;
 //   }
 // }
